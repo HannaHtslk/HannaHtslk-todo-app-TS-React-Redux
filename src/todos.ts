@@ -31,3 +31,9 @@ export interface DeleteTodoPayload {
 export interface fetchAllTodosResponse {
   todos: Todo[];
 }
+
+export interface ModalProps {
+  children: React.ReactNode;
+  title?: string;
+  onClose: () => void;
+}
