@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import todoApi from "../../config/todoApi";
 import {
-  AddTodoPayload,
+  // AddTodoPayload,
   DeleteTodoPayload,
   EditTodoPayload,
   Todo,
@@ -27,7 +27,7 @@ export const fetchAllToDosThunk = createAsyncThunk<
 
 export const addToDoThunk = createAsyncThunk<
   Todo,
-  AddTodoPayload,
+  Todo,
   { rejectValue: string }
 >("todos/add", async (body, thunkApi) => {
   try {

@@ -10,11 +10,11 @@ export interface TodoState {
   isError: boolean | string;
 }
 
-export interface AddTodoPayload {
-  id: string;
-  title: string;
-  completed: boolean;
-}
+// export interface AddTodoPayload {
+//   id: string;
+//   title: string;
+//   completed: boolean;
+// }
 
 export interface EditTodoPayload {
   id: number;
