@@ -16,7 +16,6 @@ const persistConfig = {
   key: "todos",
   version: 1,
   storage,
-  debug: true,
 };
 const persistedReducer = persistReducer(persistConfig, todosReducer);
 

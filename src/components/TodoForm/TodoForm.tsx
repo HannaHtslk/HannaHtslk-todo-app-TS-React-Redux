@@ -1,9 +1,9 @@
-import React, { useState } from "react";
 import s from "./TodoForm.module.css";
 import { AppDispatch } from "../../redux/store";
 import { useDispatch } from "react-redux";
 import { addToDoThunk } from "../../redux/todos/operations";
 import { nanoid } from "nanoid";
+import { useState } from "react";
 
 const TodoForm = () => {
   const [newTodo, setNewTodo] = useState("");

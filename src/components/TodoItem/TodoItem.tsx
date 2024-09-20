@@ -4,7 +4,6 @@ import s from "./TodoItem.module.css";
 import { useDispatch } from "react-redux";
 import {
   deleteToDoThunk,
-  editToDoThunk,
   toggleCompletedThunk,
 } from "../../redux/todos/operations";
 import { AppDispatch } from "../../redux/store";

@@ -11,7 +11,9 @@ export interface TodoState {
 }
 
 export interface AddTodoPayload {
+  id: string;
   title: string;
+  completed: boolean;
 }
 
 export interface EditTodoPayload {
