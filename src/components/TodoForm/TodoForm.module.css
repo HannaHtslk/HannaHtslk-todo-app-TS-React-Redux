@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  gap: 15px;
+  background-color: #f8f9fa;
+  transition: all 0.3s;
+  border-radius: 4px;
+  padding: 15px 5px;
+  align-items: center;
+  width: 788px;
+  border: 1px solid #e3e3e3;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.addTodoInput {
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  width: 600px;
+  padding: 5px 10px;
+}
+
+.save {
+  padding: 5px 10px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.save:hover {
+  background-color: black;
+}

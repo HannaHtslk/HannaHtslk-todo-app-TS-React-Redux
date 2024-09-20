@@ -3,6 +3,7 @@ import { Todo } from "../../todos";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../redux/store";
 import { editToDoThunk } from "../../redux/todos/operations";
+import s from "./EditTodo.module.css";
 
 const EditTodo: React.FC<{
   closeModal: () => void;
@@ -15,14 +16,16 @@ const EditTodo: React.FC<{
     closeModal();
   };
   return (
-    <div>
-      <h1>Edit your 'To Do' here</h1>
+    <div className={s.wrapper}>
       <input
         type="text"
         value={newTitle}
         onChange={(e) => setNewTitle(e.target.value)}
+        className={s.editInput}
       />
-      <button onClick={handleSave}>Save</button>
+      <button onClick={handleSave} className={s.save}>
+        Save
+      </button>
     </div>
   );
 };

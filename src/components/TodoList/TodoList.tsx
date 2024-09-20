@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectTodos } from "../../redux/todos/selectors";
+import { selectLimitedTodos } from "../../redux/todos/selectors";
 import s from "./TodoList.module.css";
 import TodoItem from "../TodoItem/TodoItem";
 import React, { useState } from "react";
@@ -9,7 +9,8 @@ import Modal from "../Modal/Modal";
 import EditTodo from "../EditTodo/EditTodo";
 
 const TodoList: React.FC = () => {
-  const todos = useSelector((state: RootState) => selectTodos(state)) || [];
+  const todos = useSelector((state: RootState) => selectLimitedTodos(state));
+
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [editedData, setEditedData] = useState<Todo | null>(null);
 
@@ -23,7 +24,7 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className={s.container}>
       <ul className={s.list}>
         {todos.map((todo: Todo) => {
           return (

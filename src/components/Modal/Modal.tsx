@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ children, onClose }) => {
     <div className={s.wrapper} onClick={handleBackDropClick}>
       <div className={s.content}>
         <>
-          <h1 className={s.title}>Edit contact</h1>
+          <h1 className={s.title}>Edit your 'To do'</h1>
           <hr />
         </>
         <button className={s.closeBtn} onClick={onClose}>

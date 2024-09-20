@@ -1,4 +1,10 @@
 .list {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  width: 800px;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 10px 0;
+  margin-top: 20px;
 }

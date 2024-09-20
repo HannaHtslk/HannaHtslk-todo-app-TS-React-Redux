@@ -13,9 +13,6 @@
   overflow: hidden;
   max-width: 1000px;
   border-radius: 5px;
-  h1 {
-    font-size: 2rem;
-  }
 }
 .closeBtn {
   position: absolute;
@@ -23,11 +20,14 @@
   right: 5px;
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 .title {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 300;
 }

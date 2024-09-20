@@ -24,20 +24,24 @@ const TodoItem: React.FC<{ todo: Todo; openItem: (todo: Todo) => void }> = ({
   };
 
   return (
-    <div>
-      <input
-        type="checkbox"
-        className={s.checkbox}
-        checked={todo.completed}
-        onChange={handleToggle}
-      />
-      <p className={s.title}>{todo.title}</p>
-      <button className={s.btnEdit} onClick={() => openItem(todo)}>
-        Edit
-      </button>
-      <button className={s.btnDelete} onClick={handleDelete}>
-        Delete
-      </button>
+    <div className={s.wrapper}>
+      <div className={s.container}>
+        <input
+          type="checkbox"
+          className={s.checkbox}
+          checked={todo.completed}
+          onChange={handleToggle}
+        />
+        <p className={s.title}>{todo.title}</p>
+      </div>
+      <div className={s.btnsWrapper}>
+        <button className={s.btn} onClick={() => openItem(todo)}>
+          Edit
+        </button>
+        <button className={s.btn} onClick={handleDelete}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 };

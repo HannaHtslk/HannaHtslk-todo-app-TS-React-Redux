@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+  gap: 15px;
+  background-color: #f8f9fa;
+  transition: all 0.3s;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #e3e3e3;
+}
+.wrapper:hover {
+  background-color: #e9ecef;
+}
+.btnsWrapper {
+  display: flex;
+  gap: 10px;
+}
+.container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox {
+  background-color: lightgray;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: default;
+}
+.btn {
+  padding: 5px 10px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.btn:hover {
+  background-color: black;
+}
