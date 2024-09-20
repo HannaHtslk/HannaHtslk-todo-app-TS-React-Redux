@@ -13,7 +13,7 @@ const TodoForm = () => {
   const handleAddTodo = () => {
     if (newTodo.trim()) {
       const todo = {
-        id: nanoid(),
+        id: Number(nanoid()),
         title: newTodo,
         completed: false,
       };
