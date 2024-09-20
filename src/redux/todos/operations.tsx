@@ -15,7 +15,7 @@ export const fetchAllToDosThunk = createAsyncThunk<
   { rejectValue: string }
 >("todos/fetchAll", async (_, thunkApi) => {
   try {
-    const { data } = await todoApi.get<Todo[]>("/todos");
+    const { data } = await todoApi.get<Todo[]>("/tasks");
     return data;
   } catch (error) {
     if (error instanceof AxiosError && error.response) {
@@ -31,7 +31,7 @@ export const addToDoThunk = createAsyncThunk<
   { rejectValue: string }
 >("todos/add", async (body, thunkApi) => {
   try {
-    const { data } = await todoApi.post<Todo>("/todos", body);
+    const { data } = await todoApi.post<Todo>("/tasks", body);
     return data;
   } catch (error) {
     if (error instanceof AxiosError && error.response) {
@@ -47,7 +47,7 @@ export const editToDoThunk = createAsyncThunk<
   { rejectValue: string }
 >("todos/edit", async ({ id, ...body }, thunkApi) => {
   try {
-    const { data } = await todoApi.patch<Todo>(`/todos/${id}`, body);
+    const { data } = await todoApi.put<Todo>(`/tasks/${id}`, body);
     return data;
   } catch (error) {
     if (error instanceof AxiosError && error.response) {
@@ -63,7 +63,7 @@ export const deleteToDoThunk = createAsyncThunk<
   { rejectValue: string }
 >("todos/delete", async (id, thunkApi) => {
   try {
-    await todoApi.delete(`/todos/${id}`);
+    await todoApi.delete(`/tasks/${id}`);
     return { id };
   } catch (error) {
     if (error instanceof AxiosError && error.response) {
@@ -79,7 +79,7 @@ export const toggleCompletedThunk = createAsyncThunk<
   { rejectValue: string }
 >("todos/completed", async ({ id, completed }, thunkApi) => {
   try {
-    const { data } = await todoApi.put<Todo>(`/todos/${id}`, {
+    const { data } = await todoApi.put<Todo>(`/tasks/${id}`, {
       completed: !completed,
     });
     return data;

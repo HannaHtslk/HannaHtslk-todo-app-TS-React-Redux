@@ -16,11 +16,13 @@ const persistConfig = {
   key: "todos",
   version: 1,
   storage,
+  debug: true,
 };
+const persistedReducer = persistReducer(persistConfig, todosReducer);
 
 export const store = configureStore({
   reducer: {
-    todos: persistReducer(persistConfig, todosReducer),
+    todos: persistedReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -31,5 +33,6 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

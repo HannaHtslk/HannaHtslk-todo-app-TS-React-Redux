@@ -29,7 +29,7 @@ const TodoForm = () => {
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         className={s.addTodoInput}
-        placeholder="Enter new todo"
+        placeholder="Enter new to do"
       />
       <button onClick={handleAddTodo} className={s.save}>
         Save
